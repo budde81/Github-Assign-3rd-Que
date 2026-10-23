@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: qa-practice-hub-form-tests
+Version: 1.0.0
+Summary: Pytest and Playwright UI automation for QA Practice Hub login and registration forms
+Requires-Python: >=3.10
+Provides-Extra: test
+Requires-Dist: playwright<2,>=1.50; extra == "test"
+Requires-Dist: pytest<9,>=8.3; extra == "test"
+Requires-Dist: pytest-playwright<1,>=0.7; extra == "test"

@@ -1,0 +1,36 @@
+[project]
+name = "qa-practice-hub-form-tests"
+version = "1.0.0"
+description = "Pytest and Playwright UI automation for QA Practice Hub login and registration forms"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+test = [
+    "playwright>=1.50,<2",
+    "pytest>=8.3,<9",
+    "pytest-playwright>=0.7,<1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--strict-config",
+    "--browser=chromium",
+    "--browser-channel=chrome",
+    "--tracing=retain-on-failure",
+    "--screenshot=only-on-failure",
+    "--video=retain-on-failure",
+]
+log_cli = true
+log_cli_level = "INFO"
+junit_family = "xunit2"
+markers = [
+    "smoke: critical page availability and happy-path coverage",
+    "regression: functional, validation, and interaction coverage",
+]

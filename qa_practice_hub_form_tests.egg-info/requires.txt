@@ -1,0 +1,5 @@
+
+[test]
+playwright<2,>=1.50
+pytest<9,>=8.3
+pytest-playwright<1,>=0.7
